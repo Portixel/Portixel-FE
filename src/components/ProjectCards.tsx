@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 interface IProjectCards {
   Data: { id: string; bgImg: string; url: string; time: string };
 }
@@ -27,4 +29,4 @@ const ProjectCards = ({ Data: { bgImg, url, time } }: IProjectCards) => {
   );
 };
 
-export default ProjectCards;
+export default memo(ProjectCards);

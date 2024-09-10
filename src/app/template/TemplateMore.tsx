@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Link } from "react-router-dom";
 
 const TemplateMore = () => {
@@ -9,7 +9,7 @@ const TemplateMore = () => {
   };
 
   return (
-    <>
+    <Suspense fallback={<></>}>
       <div className="templatesCard">
         {Images.map((image) => (
           <button
@@ -41,7 +41,7 @@ const TemplateMore = () => {
       <Link to="/join" className="submit goToDashboard">
         Go To Dashboard
       </Link>
-    </>
+    </Suspense>
   );
 };
 

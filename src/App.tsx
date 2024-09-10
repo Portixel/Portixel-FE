@@ -1,18 +1,20 @@
-import Dashboard from "@/app/dashboard/Dashboard";
-import DashboardLayout from "@/app/dashboard/DashboardLayout";
-import Home from "@/app/Home";
-import JoinEmail from "@/app/join/JoinEmail";
-import JoinLayout from "@/app/join/JoinLayout";
-import JoinWallet from "@/app/join/JoinWallet";
-import OnboardAgency from "@/app/onboard/OnboardAgency";
-import OnboardIndividual from "@/app/onboard/OnboardIndividual";
-import OnboardLayout from "@/app/onboard/OnboardLayout";
-import TemplateFeatured from "@/app/template/TemplateFeatured";
-import TemplateLayout from "@/app/template/TemplateLayout";
-import TemplateMore from "@/app/template/TemplateMore";
 import store from "@/redux/store";
+import { lazy } from "react";
 import { Provider } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+
+const Dashboard = lazy(() => import("@/app/dashboard/Dashboard"));
+import DashboardLayout from "@/app/dashboard/DashboardLayout";
+const Home = lazy(() => import("@/app/Home"));
+import JoinLayout from "@/app/join/JoinLayout";
+const JoinEmail = lazy(() => import("@/app/join/JoinEmail"));
+const JoinWallet = lazy(() => import("@/app/join/JoinWallet"));
+const OnboardAgency = lazy(() => import("@/app/onboard/OnboardAgency"));
+const OnboardIndividual = lazy(() => import("@/app/onboard/OnboardIndividual"));
+import OnboardLayout from "@/app/onboard/OnboardLayout";
+const TemplateFeatured = lazy(() => import("@/app/template/TemplateFeatured"));
+import TemplateLayout from "@/app/template/TemplateLayout";
+const TemplateMore = lazy(() => import("@/app/template/TemplateMore"));
 
 function App() {
   return (

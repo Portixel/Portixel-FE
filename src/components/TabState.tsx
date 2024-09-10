@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 interface ITabProp<T = { title: string }[]> {
   Tabs: T;
   selected: string;
@@ -20,4 +22,4 @@ const TabState = ({ Tabs, selected, setSelected }: ITabProp) => {
   );
 };
 
-export default TabState;
+export default memo(TabState);

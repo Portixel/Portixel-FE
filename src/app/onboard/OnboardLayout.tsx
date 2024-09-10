@@ -1,5 +1,6 @@
 import Tab from "@/components/TabPath";
 import "@/style/index.scss";
+import { Suspense } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const OnboardLayout = () => {
@@ -19,7 +20,9 @@ const OnboardLayout = () => {
         <div className="bottom">
           <Tab Tabs={Tabs} />
 
-          <Outlet />
+          <Suspense fallback={<></>}>
+            <Outlet />
+          </Suspense>
         </div>
       </div>
     </div>

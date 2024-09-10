@@ -1,6 +1,7 @@
 import Tab from "@/components/TabPath";
 import TemplateTopMenu from "@/components/TemplateTopMenu";
 import "@/style/index.scss";
+import { Suspense } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const TemplateLayout = () => {
@@ -38,7 +39,9 @@ const TemplateLayout = () => {
 
           <Tab Tabs={Tabs} />
 
-          <Outlet />
+          <Suspense fallback={<></>}>
+            <Outlet />
+          </Suspense>
         </div>
       </div>
     </div>

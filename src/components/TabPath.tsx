@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 interface ITabProp<T = { title: string; url: string }[]> {
@@ -22,4 +23,4 @@ const TabPath = ({ Tabs }: ITabProp) => {
   );
 };
 
-export default TabPath;
+export default memo(TabPath);

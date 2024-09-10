@@ -1,7 +1,8 @@
 import DashboardSideBar from "@/components/DashboardSideBar";
 import DashboardTopMenu from "@/components/DashboardTopMenu";
-import NewPortfolioModal from "@/components/NewPortfolioModal";
+import { lazy, Suspense } from "react";
 import { Link, Outlet } from "react-router-dom";
+const NewPortfolioModal = lazy(() => import("@/components/NewPortfolioModal"));
 
 const DashboardLayout = () => {
   return (
@@ -29,10 +30,14 @@ const DashboardLayout = () => {
       <div className="bottom">
         <DashboardSideBar />
 
-        <Outlet />
+        <Suspense fallback={<></>}>
+          <Outlet />
+        </Suspense>
       </div>
 
-      <NewPortfolioModal />
+      <Suspense fallback={<></>}>
+        <NewPortfolioModal />
+      </Suspense>
     </div>
   );
 };
