@@ -1,22 +1,42 @@
-"use client";
 import TabState from "@/components/TabState";
 import { Industries, Skills } from "@/data/Mock";
-import { FormEvent, useState } from "react";
+import { getState } from "@/redux/store";
+import { SET_GENERATE_MODAL_STATE } from "@/redux/util/utilSlice";
+import { FormEvent, MouseEvent, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const NewPortfolioModal = () => {
+  const dispatch = useDispatch();
   const [tab, setTab] = useState(Tabs[0]?.title);
+
+  const { generateModalIsOpen } = useSelector(
+    (state: ReturnType<typeof getState>) => state?.util
+  );
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
   };
 
+  const closeModal = () => {
+    dispatch(SET_GENERATE_MODAL_STATE({ generateModalIsOpen: false }));
+  };
+
+  const blockPropagation = (e: MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   return (
-    <div className="modalParent">
-      <div className="NewPortfolioModal">
+    <div
+      className="modalParent"
+      onClick={closeModal}
+      style={{ display: generateModalIsOpen ? "flex" : "none" }}
+    >
+      <div className="NewPortfolioModal" onClick={blockPropagation}>
         <div className="top">
           <h4 className="title">Generate Portfolio Template</h4>
 
-          <button>
+          <button onClick={closeModal}>
             <img alt="" src="/icon/close.svg" width={24} height={24} />
           </button>
         </div>

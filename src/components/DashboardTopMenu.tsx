@@ -1,7 +1,14 @@
+import { SET_GENERATE_MODAL_STATE } from "@/redux/util/utilSlice";
+import { useDispatch } from "react-redux";
+
 const DashboardTopMenu = () => {
+  const dispatch = useDispatch();
   const handleProfilePic = () => {};
   const handleCreateNew = () => {};
-  const handleGeneratePortfolio = () => {};
+
+  const handleGeneratePortfolio = () => {
+    dispatch(SET_GENERATE_MODAL_STATE({ generateModalIsOpen: true }));
+  };
 
   return (
     <div className="DashboardTopMenu">

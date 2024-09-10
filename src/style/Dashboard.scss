@@ -215,6 +215,11 @@
   border: 1px solid $stroke;
   padding: 28px;
 
+  button {
+    background: none;
+    border: none;
+  }
+
   .top {
     all: unset;
     width: 100%;
@@ -243,10 +248,16 @@
     max-height: 160px;
     background-color: $bgBlack;
     color: $textSecondary;
+    font-size: 14px;
     border: 1px solid $stroke;
     border-radius: 5px;
     padding: 11px 8px;
     margin: 10px 0;
+  }
+
+  textarea {
+    min-height: 50px;
+    resize: vertical;
   }
 
   .submit {

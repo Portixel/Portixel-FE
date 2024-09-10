@@ -1,6 +1,6 @@
 import DashboardSideBar from "@/components/DashboardSideBar";
 import DashboardTopMenu from "@/components/DashboardTopMenu";
-// import NewPortfolioModal from "@/components/reusable/NewPortfolioModal";
+import NewPortfolioModal from "@/components/NewPortfolioModal";
 import { Link, Outlet } from "react-router-dom";
 
 const DashboardLayout = () => {
@@ -32,7 +32,7 @@ const DashboardLayout = () => {
         <Outlet />
       </div>
 
-      {/* <NewPortfolioModal /> */}
+      <NewPortfolioModal />
     </div>
   );
 };
