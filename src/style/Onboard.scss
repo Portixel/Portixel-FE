@@ -1,0 +1,59 @@
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   ONBOARD                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.Onboard {
+  .left .bottom {
+    max-width: 401px;
+  }
+
+  .inputGroup {
+    width: 100%;
+    background-color: $bgBlack;
+    color: $textSecondary;
+    font-size: 12px;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    p {
+      font-size: 12px;
+    }
+
+    .line {
+      display: block;
+      width: 1px;
+      height: 28px;
+      background-color: $stroke;
+    }
+
+    input,
+    select {
+      border: none;
+    }
+  }
+
+  label,
+  input,
+  textarea,
+  .skill {
+    width: 100%;
+    max-height: 60px;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  .submit {
+    margin-top: 20px;
+  }
+}

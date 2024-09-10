@@ -1,0 +1,390 @@
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                  DASHBOARD                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.Dashboard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    width: 100%;
+    background-color: $bgBlack;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    .search {
+      max-width: 500px;
+      height: 37px;
+      flex: 1;
+      background-color: $lighterBgBlack;
+      background-image: url("/icon/search.svg");
+      background-repeat: no-repeat;
+      background-position: 17px 50%;
+      color: $textSecondary;
+      font-weight: normal;
+      font-size: 12px;
+      border-radius: 5px;
+      border: none;
+      padding: 0 10px 0 44px;
+    }
+  }
+
+  .bottom {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .modalParent {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($bgBlack, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 5;
+
+    & > div {
+      max-height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                             DASHBOARD TOP MENU                             */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.DashboardTopMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 15px;
+  }
+
+  .ai {
+    background-color: $lighterBgBlack;
+    font-weight: 500;
+    border: 1px solid $stroke;
+  }
+
+  .new {
+    background-color: white;
+    margin: 0 24px 0 10px;
+
+    p {
+      color: $bgBlack;
+    }
+  }
+
+  .dp {
+    height: 30px;
+    background-color: coral;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    text-transform: capitalize;
+    padding: 5px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                              DASHBOARD SIDEBAR                             */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.DashboardSideBar {
+  height: 100%;
+  width: 100%;
+  max-width: 216px;
+  background-color: $bgBlack;
+  display: flex;
+  overflow-y: auto;
+  filter: drop-shadow(2px 20px 5px rgba(0, 0, 0, 0.2));
+  padding: 30px 13px 39px 32px;
+
+  .mainLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    a,
+    button {
+      background-color: transparent;
+      color: $textSecondary;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+      border: none;
+      padding: 10px;
+      transition: none;
+
+      img {
+        visibility: hidden;
+        transition: none;
+      }
+    }
+
+    .selected {
+      background-color: $lighterBgBlack;
+      color: white;
+
+      img {
+        visibility: visible;
+      }
+    }
+
+    .new {
+      gap: 20px;
+      margin: 0 0 0 auto;
+      text-align: right;
+    }
+
+    .new img {
+      visibility: visible;
+    }
+  }
+
+  .split {
+    height: 1px;
+    width: 100%;
+    max-width: 148px;
+    background-color: $stroke;
+    margin: 20px 0 10px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                             NEW PORTFOLIO MODAL                            */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.NewPortfolioModal {
+  width: 100%;
+  max-width: 457px;
+  background-color: $bgBlack;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid $stroke;
+  padding: 28px;
+
+  .top {
+    all: unset;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    max-height: 160px;
+    background-color: $bgBlack;
+    color: $textSecondary;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+    padding: 11px 8px;
+    margin: 10px 0;
+  }
+
+  .submit {
+    background-color: $whiteBg;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    padding: 14px 16px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               DASHBOARD MAIN                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.DashboardMain {
+  height: 100%;
+  flex: 1;
+  display: block;
+  padding: 19px 38px;
+
+  .intro {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .pro {
+    width: 100%;
+    background-color: $lighterBgBlack;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 5px;
+    border: 1px solid $stroke;
+    padding: 22px 19px;
+    margin: 16px 0;
+
+    button {
+      background-color: white;
+      color: black;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 5px;
+      border: none;
+      padding: 7px 22px;
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                PROJECT CARD                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.ProjectCard {
+  width: fit-content;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border-radius: 5px;
+  padding: 19px 12px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    238.19deg,
+    rgba(28, 10, 47, 0.85) 19.35%,
+    #040e3a 81.07%
+  );
+
+  .bg {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-position: 50% -10px;
+    background-size: 120%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.05;
+    z-index: 0;
+  }
+
+  .left {
+    background-color: transparent;
+    padding: 0;
+    z-index: 1;
+
+    .url {
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .time {
+      color: $textSecondary;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    z-index: 1;
+
+    .dp {
+      min-width: 25px;
+      aspect-ratio: 1;
+      background-color: coral;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      border-radius: 50%;
+    }
+
+    .more {
+      width: 34px;
+      height: 20px;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      border: none;
+    }
+  }
+}

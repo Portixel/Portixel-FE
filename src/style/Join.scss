@@ -1,0 +1,155 @@
+.Join {
+  height: 100vh;
+
+  .left {
+    height: 100%;
+    width: 100%;
+    max-width: 598px;
+    background-color: $lighterBgBlack;
+    padding: 34px 60px;
+    overflow-y: auto;
+
+    .bottom {
+      max-width: 349px;
+      margin: 0 auto;
+      padding-bottom: 30px;
+    }
+
+    .logo {
+      border-radius: 6px;
+      margin-bottom: 58px;
+      display: flex;
+      align-self: stretch;
+      position: sticky;
+      top: 0px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 24px;
+      margin: 50px 0 18px;
+    }
+
+    .subTitle {
+      font-size: 14px;
+      color: $textSecondary;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+      background-color: $bgBlack;
+      color: $textSecondary;
+      font-size: 12px;
+      border: 1px solid $stroke;
+      border-radius: 5px;
+      padding: 11px 8px;
+    }
+
+    .or {
+      color: $textSecondary;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 14px 0;
+
+      span {
+        height: 1px;
+        width: 100%;
+        background-color: $stroke;
+        display: block;
+      }
+    }
+
+    .signWith {
+      width: 100%;
+      background: none;
+      display: flex;
+      align-items: center;
+      border: 1px solid $stroke;
+      border-radius: 5px;
+      padding: 14px 16px;
+
+      p {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+
+    .submit {
+      background-color: $whiteBg;
+      color: black;
+      font-weight: 700;
+      border-radius: 5px;
+      border: none;
+      padding: 14px 16px;
+    }
+
+    .wallets {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 18px;
+
+      button {
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                     TAB                                    */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.Join {
+  .Tab {
+    width: fit-content;
+    background-color: $bgBlack;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid $stroke;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    position: relative;
+
+    a,
+    button {
+      border-radius: 5px;
+      border: 1px solid transparent;
+      padding: 8px 20px;
+      z-index: 5;
+      transition: none;
+    }
+
+    .selected {
+      background-color: $lighterBgBlack;
+      border-color: $stroke;
+    }
+  }
+}

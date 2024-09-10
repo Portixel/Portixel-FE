@@ -1,0 +1,40 @@
+@import "./Font.scss";
+@import "./Theme.scss";
+
+* {
+  color: white;
+  box-sizing: border-box;
+  accent-color: $tint;
+  caret-color: $tint;
+  font-family: HarmonyOsSans;
+  transition: all 0.5s;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $bgBlack;
+
+  a {
+    text-decoration: none;
+  }
+
+  .home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    img {
+      border-radius: 20px;
+    }
+  }
+}
+
+@import "./Join.scss";
+@import "./Onboard.scss";
+@import "./Template.scss";
+@import "./Dashboard.scss";
