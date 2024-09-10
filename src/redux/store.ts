@@ -4,4 +4,4 @@ import rootReducer from "./rootReducer";
 const store = configureStore({ reducer: rootReducer });
 
 export default store;
-export const getState = store.getState;
+export type IRootStore = ReturnType<typeof store.getState>;

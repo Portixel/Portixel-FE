@@ -1,6 +1,6 @@
 import TabState from "@/components/TabState";
 import { Industries, Skills } from "@/data/Mock";
-import { getState } from "@/redux/store";
+import { IRootStore } from "@/redux/store";
 import { SET_GENERATE_MODAL_STATE } from "@/redux/util/utilSlice";
 import { FormEvent, MouseEvent, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,7 +10,7 @@ const NewPortfolioModal = () => {
   const [tab, setTab] = useState(Tabs[0]?.title);
 
   const { generateModalIsOpen } = useSelector(
-    (state: ReturnType<typeof getState>) => state?.util
+    (state: IRootStore) => state?.util
   );
 
   const handleSubmit = (e: FormEvent) => {
