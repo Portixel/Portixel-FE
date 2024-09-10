@@ -1,20 +1,22 @@
 import Dashboard from "@/app/dashboard/Dashboard";
 import DashboardLayout from "@/app/dashboard/DashboardLayout";
+import Home from "@/app/Home";
 import JoinEmail from "@/app/join/JoinEmail";
 import JoinLayout from "@/app/join/JoinLayout";
 import JoinWallet from "@/app/join/JoinWallet";
 import OnboardAgency from "@/app/onboard/OnboardAgency";
 import OnboardIndividual from "@/app/onboard/OnboardIndividual";
 import OnboardLayout from "@/app/onboard/OnboardLayout";
-import Home from "@/app/Home";
-import { Route, Routes } from "react-router-dom";
+import TemplateFeatured from "@/app/template/TemplateFeatured";
 import TemplateLayout from "@/app/template/TemplateLayout";
 import TemplateMore from "@/app/template/TemplateMore";
-import TemplateFeatured from "@/app/template/TemplateFeatured";
+import store from "@/redux/store";
+import { Provider } from "react-redux";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Routes>
         <Route path="" element={<Home />} />
 
@@ -40,7 +42,7 @@ function App() {
 
         <Route path="*" element={null} />
       </Routes>
-    </>
+    </Provider>
   );
 }
 
