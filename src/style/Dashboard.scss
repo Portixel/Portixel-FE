@@ -290,30 +290,40 @@
     font-size: 18px;
     font-weight: 700;
   }
+}
 
-  .pro {
-    width: 100%;
-    background-color: $lighterBgBlack;
-    font-size: 14px;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                  PRO CARD                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.ProCard {
+  width: 100%;
+  background-color: $lighterBgBlack;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 5px;
+  border: 1px solid $stroke;
+  padding: 22px 19px;
+  margin: 16px 0;
+
+  button {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: 700;
     border-radius: 5px;
-    border: 1px solid $stroke;
-    padding: 22px 19px;
-    margin: 16px 0;
-
-    button {
-      background-color: white;
-      color: black;
-      font-size: 12px;
-      font-weight: 700;
-      border-radius: 5px;
-      border: none;
-      padding: 7px 22px;
-      margin: 0 0 0 auto;
-    }
+    border: none;
+    padding: 9px 22px;
+    margin: 0 0 0 auto;
   }
 }
 
