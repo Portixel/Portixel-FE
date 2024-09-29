@@ -4,6 +4,9 @@ import { Provider } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 
 const Dashboard = lazy(() => import("@/app/dashboard/Dashboard"));
+const DashboardProjects = lazy(
+  () => import("@/app/dashboard/projects/DashboardProjects")
+);
 import DashboardLayout from "@/app/dashboard/DashboardLayout";
 const Home = lazy(() => import("@/app/Home"));
 import JoinLayout from "@/app/join/JoinLayout";
@@ -39,6 +42,7 @@ function App() {
 
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route path="" element={<Dashboard />} />
+          <Route path="projects" element={<DashboardProjects />} />
           <Route path="*" element={null} />
         </Route>
 
