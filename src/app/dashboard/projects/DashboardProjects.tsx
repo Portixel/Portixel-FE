@@ -1,10 +1,14 @@
 import ProCard from "@/components/ProCard";
 import ProjectCards2 from "@/components/ProjectCards2";
 import TabState from "@/components/TabState";
+import {
+  DashboardProjectsData,
+  DashboardProjectsTabs,
+} from "@/data/Dashboard.mock";
 import { Suspense, useState } from "react";
 
 const DashboardProjects = () => {
-  const [tab, setTab] = useState(Tabs[0].title);
+  const [tab, setTab] = useState(DashboardProjectsTabs[0].title);
 
   return (
     <Suspense fallback={<></>}>
@@ -13,14 +17,20 @@ const DashboardProjects = () => {
 
         <ProCard />
 
-        <TabState Tabs={Tabs} selected={tab} setSelected={setTab} />
+        <TabState
+          Tabs={DashboardProjectsTabs}
+          selected={tab}
+          setSelected={setTab}
+        />
 
         <div className="cards">
-          {Projects.map((portfolio) => (
+          {DashboardProjectsData.map((portfolio) => (
             <ProjectCards2 key={portfolio.id} Data={portfolio} />
           ))}
 
-          {Projects.length == 0 && <div className="empty">No data yet</div>}
+          {DashboardProjectsData.length == 0 && (
+            <div className="empty">No data yet</div>
+          )}
         </div>
       </div>
     </Suspense>
@@ -28,45 +38,3 @@ const DashboardProjects = () => {
 };
 
 export default DashboardProjects;
-
-const Projects = [
-  {
-    id: "1",
-    bgImg: "/template/image5.png",
-    title: "emerie.png",
-    size: "10MB",
-    date: "27/08/2024",
-  },
-  {
-    id: "2",
-    bgImg: "/template/image6.png",
-    title: "emerie.png",
-    size: "10MB",
-    date: "27/08/2024",
-  },
-  {
-    id: "3",
-    bgImg: "/template/image7.png",
-    title: "emerie.png",
-    size: "10MB",
-    date: "27/08/2024",
-  },
-];
-
-const Tabs = [
-  {
-    title: "All Projects",
-  },
-  {
-    title: "Github",
-  },
-  {
-    title: "Figma",
-  },
-  {
-    title: "Marketplace",
-  },
-  {
-    title: "Others",
-  },
-];
