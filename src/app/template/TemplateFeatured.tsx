@@ -49,15 +49,15 @@ export default TemplateFeatured;
 
 const Images = [
   {
-    src: "/icon/templateMockUp1.png",
+    src: "/template/image1.png",
   },
   {
-    src: "/icon/templateMockUp2.png",
+    src: "/template/image2.png",
   },
   {
-    src: "/icon/templateMockUp3.png",
+    src: "/template/image3.png",
   },
   {
-    src: "/icon/templateMockUp4.png",
+    src: "/template/image4.png",
   },
 ];

@@ -26,7 +26,7 @@ const Portfolios = [
   {
     id: "1",
     url: "emerie.portixel.website",
-    bgImg: "/icon/templateMockUp1.png",
+    bgImg: "/template/image1.png",
     time: "Edited 12mins ago",
   },
 ];

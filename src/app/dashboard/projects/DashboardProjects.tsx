@@ -32,21 +32,21 @@ export default DashboardProjects;
 const Projects = [
   {
     id: "1",
-    bgImg: "/icon/templateMockUp5.png",
+    bgImg: "/template/image5.png",
     title: "emerie.png",
     size: "10MB",
     date: "27/08/2024",
   },
   {
     id: "2",
-    bgImg: "/icon/templateMockUp6.png",
+    bgImg: "/template/image6.png",
     title: "emerie.png",
     size: "10MB",
     date: "27/08/2024",
   },
   {
     id: "3",
-    bgImg: "/icon/templateMockUp7.png",
+    bgImg: "/template/image7.png",
     title: "emerie.png",
     size: "10MB",
     date: "27/08/2024",
