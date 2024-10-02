@@ -274,6 +274,85 @@
 /*                                      -                                     */
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
+/*                               CREATE NEW MENU                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.createNewParent {
+  position: relative;
+
+  .modalParent {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  img {
+    transition-duration: 0.3s;
+  }
+}
+
+.CreateNewMenu {
+  max-width: 200px;
+  width: 100vw;
+  background-color: $bgBlack;
+  border-radius: 5px;
+  filter: drop-shadow(0px 0px 10px rgba(black, 0.1));
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 20px;
+  padding: 10px 0;
+  z-index: 1;
+
+  button {
+    width: 100%;
+    background-color: $bgBlack;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: none;
+    padding: 10px;
+
+    p {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  form {
+    border-bottom: 1px solid $stroke;
+    padding: 10px;
+    margin-bottom: 5px;
+
+    input {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid $stroke;
+      border-radius: 5px;
+      padding: 5px 10px;
+
+      &::placeholder {
+        color: $textSecondary;
+      }
+    }
+
+    .submit {
+      background: linear-gradient(15deg, #4c6fff, #ae66ff);
+      border: none;
+      font-weight: bold;
+      margin: 10px 0 28px;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 /*                               DASHBOARD MAIN                               */
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
