@@ -1,4 +1,4 @@
-const Loader = () => {
+const Loader = ({ message }: { message: string }) => {
   return (
     <div className="Loader">
       <img
@@ -8,7 +8,7 @@ const Loader = () => {
         height={43}
         className="logo"
       />
-      <p>Wait for a moment while we get your portfolio ready...</p>
+      <p>{message}</p>
     </div>
   );
 };

@@ -39,7 +39,7 @@ const NewPortfolioModal = () => {
       style={{ display: generateModalIsOpen ? "flex" : "none" }}
     >
       {loading ? (
-        <Loader />
+        <Loader message="Wait for a moment while we get your portfolio ready..." />
       ) : (
         <div className="NewPortfolioModal" onClick={blockPropagation}>
           <div className="top">
