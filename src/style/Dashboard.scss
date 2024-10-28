@@ -296,6 +296,7 @@
   border-radius: 5px;
   padding: 30px 28px;
 
+  a,
   button {
     background-color: transparent;
     display: flex;
@@ -362,6 +363,7 @@
     align-items: center;
     gap: 5px;
 
+    a,
     button {
       white-space: nowrap;
       display: flex;

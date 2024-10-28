@@ -6,6 +6,9 @@ export interface utilStateType {
       infoIsOpen: boolean;
       permissionIsOpen: boolean;
     };
+    figma: {
+      infoIsOpen: boolean;
+    };
   };
 }
 

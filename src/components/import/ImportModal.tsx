@@ -1,3 +1,4 @@
+import FigmaInfo from "@/components/import/FigmaInfo";
 import GithubInfo from "@/components/import/GithubInfo";
 import { IRootStore } from "@/redux/store";
 import { SET_IMPORT_PROJECT_STATE } from "@/redux/util/utilSlice";
@@ -18,6 +19,14 @@ const ImportModal = () => {
     dispatch(
       SET_IMPORT_PROJECT_STATE({
         importProject: { github: { infoIsOpen: true } },
+      })
+    );
+  };
+
+  const openFigma = () => {
+    dispatch(
+      SET_IMPORT_PROJECT_STATE({
+        importProject: { figma: { infoIsOpen: true } },
       })
     );
   };
@@ -51,7 +60,7 @@ const ImportModal = () => {
             <p>Import from Github</p>
           </button>
 
-          <button onClick={closeModal} className="options">
+          <button onClick={openFigma} className="options">
             <p>Import from Figma</p>
           </button>
 
@@ -63,6 +72,7 @@ const ImportModal = () => {
       </div>
 
       <GithubInfo />
+      <FigmaInfo />
     </>
   );
 };
