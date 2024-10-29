@@ -415,6 +415,107 @@
   }
 }
 
+.UploadFiles {
+  overflow-x: hidden;
+
+  .title {
+    margin-bottom: 44px;
+  }
+
+  .drop {
+    color: $textSecondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed $stroke;
+    border-radius: 5px;
+    text-align: center;
+    padding: 39px;
+
+    input {
+      max-width: 170px;
+      margin-top: 2px;
+    }
+  }
+
+  .subInstruction {
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px 0 45px;
+
+    p {
+      color: $textSecondary;
+    }
+  }
+
+  .files {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 49px;
+  }
+}
+
+.UploadFilesCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  border: 1px dashed $stroke;
+  border-radius: 5px;
+  padding: 11px 18px;
+
+  .right {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .top {
+    width: 100%;
+    font-weight: inherit;
+    font-size: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+  }
+
+  .bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    .loading {
+      width: 100%;
+      height: 7px;
+      background-color: $stroke;
+      display: block;
+      border-radius: 50px;
+      overflow: hidden;
+      margin-top: 10px;
+
+      .bar {
+        height: 100%;
+        width: 0%;
+        background-color: $textSecondary;
+        display: block;
+        border-radius: 10px;
+        transition: width 0s;
+      }
+    }
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                      -                                     */
 /* -------------------------------------------------------------------------- */
