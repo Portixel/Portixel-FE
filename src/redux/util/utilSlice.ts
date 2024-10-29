@@ -7,6 +7,7 @@ const initialState: utilStateType = {
     modalIsOpen: false,
     github: { infoIsOpen: false, permissionIsOpen: false },
     figma: { infoIsOpen: false },
+    upload: { infoIsOpen: false },
   },
 };
 
@@ -30,6 +31,9 @@ export const utilSlice = createSlice({
 
       state.importProject.figma.infoIsOpen =
         action.payload.importProject?.figma?.infoIsOpen || false;
+
+      state.importProject.upload.infoIsOpen =
+        action.payload.importProject?.upload?.infoIsOpen || false;
     },
   },
 });

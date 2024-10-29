@@ -9,6 +9,9 @@ export interface utilStateType {
     figma: {
       infoIsOpen: boolean;
     };
+    upload: {
+      infoIsOpen: boolean;
+    };
   };
 }
 
