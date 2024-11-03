@@ -5,6 +5,15 @@ const DashboardSideBar = () => {
 
   return (
     <div className="DashboardSideBar">
+      <Link to="/" className="logo">
+        <img
+          alt="Portixel Logo"
+          src="/icon/logoFull.svg"
+          width={100}
+          height={28}
+        />
+      </Link>
+
       <div className="mainLinks">
         {Tabs.map((tab) => (
           <Link
@@ -16,22 +25,6 @@ const DashboardSideBar = () => {
             {tab.title}
           </Link>
         ))}
-
-        <button className="new">
-          <p>Create a Team</p>
-          <img alt="" height={20} width={20} src="/icon/add.svg" />
-        </button>
-
-        <span className="split"></span>
-
-        <Link
-          to={SettingUrl.url}
-          key={SettingUrl.title}
-          className={`${selected == SettingUrl.url && "selected"}`}
-        >
-          <img alt="" height={14} width={14} src="/icon/tickPlane.svg" />
-          {SettingUrl.title}
-        </Link>
       </div>
     </div>
   );
@@ -44,14 +37,13 @@ const Tabs = [
     title: "Dashboard",
     url: "/dashboard",
   },
-  {
-    title: "Projects",
-    url: "/dashboard/projects",
-  },
+
   {
     title: "Marketplace",
     url: "/dashboard/marketplace",
   },
+  {
+    title: "Manage team",
+    url: "/dashboard/projects",
+  },
 ];
-
-const SettingUrl = { title: "Settings", url: "/dashboard/settings" };

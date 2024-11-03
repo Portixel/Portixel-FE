@@ -1,20 +1,17 @@
-import CreateNewMenu from "@/components/CreateNewMenu";
+import ProfileMenu from "@/components/ProfileMenu";
 import {
   SET_GENERATE_MODAL_STATE,
   SET_IMPORT_PROJECT_STATE,
 } from "@/redux/util/utilSlice";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useLocation } from "react-router-dom";
 
 const DashboardTopMenu = () => {
   const dispatch = useDispatch();
-  const { pathname } = useLocation();
-  const [toggleCreateNew, setToggleCreateNew] = useState(false);
+  const [toggleProfileMenu, setToggleProfileMenu] = useState(false);
 
-  const handleProfilePic = () => {};
-  const handleCreateNew = () => {
-    setToggleCreateNew(true);
+  const handleProfilePic = () => {
+    setToggleProfileMenu(!toggleProfileMenu);
   };
 
   const handleGeneratePortfolio = () => {
@@ -30,36 +27,30 @@ const DashboardTopMenu = () => {
   return (
     <div className="DashboardTopMenu">
       <button onClick={handleGeneratePortfolio} className="ai">
-        <img alt="" src="/icon/ai.svg" height={18} width={18} />
-        <p>Generate Portfolio</p>
+        <img alt="" src="/icon/aiBlue.svg" height={18} width={18} />
+        <p>Generate Interface</p>
       </button>
 
-      {pathname == "/dashboard/projects" ? (
-        <button onClick={handleImportProject} className="new import">
-          <img alt="" src="/icon/upload.svg" height={18} width={18} />
-          <p>Import</p>
-        </button>
-      ) : (
-        <div className="createNewParent">
-          <button onClick={handleCreateNew} className="new">
-            <p>Create New</p>
-            <img
-              alt=""
-              src="/icon/downBg.svg"
-              height={18}
-              width={18}
-              style={{ transform: `rotate(${toggleCreateNew ? 180 : 0}deg)` }}
-            />
-          </button>
+      <button onClick={handleImportProject} className="new import">
+        <p>Import Works</p>
+      </button>
 
-          {toggleCreateNew && (
-            <CreateNewMenu setToggleCreateNew={setToggleCreateNew} />
-          )}
+      <button className="profileMenuParent" onClick={handleProfilePic}>
+        <div className="dp">
+          <span>OF</span>
         </div>
-      )}
 
-      <button onClick={handleProfilePic} className="dp">
-        <span>OF</span>
+        <img
+          alt=""
+          src="/icon/down.svg"
+          height={20}
+          width={20}
+          style={{ transform: `rotate(${toggleProfileMenu ? 180 : 0}deg)` }}
+        />
+
+        {toggleProfileMenu && (
+          <ProfileMenu setToggleProfileMenu={setToggleProfileMenu} />
+        )}
       </button>
     </div>
   );
