@@ -730,26 +730,30 @@
 
 .ProCard {
   width: 100%;
-  background-color: $lighterBgBlack;
-  font-size: 14px;
+  background-color: #4c6fff4d;
+  font-size: 12px;
   font-weight: 400;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 4px;
   border-radius: 5px;
-  border: 1px solid $stroke;
-  padding: 22px 19px;
+  padding: 10px 19px;
   margin: 16px 0;
 
+  img {
+    margin-top: -4px;
+  }
+
   button {
-    background-color: white;
-    color: black;
-    font-size: 12px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
     font-weight: 700;
     border-radius: 5px;
     border: none;
-    padding: 9px 22px;
-    margin: 0 0 0 auto;
+    text-decoration: underline;
+    padding: 1px 4px;
   }
 }
 
