@@ -93,6 +93,11 @@ const JoinVerification = ({ email }: { email: string }) => {
             disabled={!completed}
           />
         </form>
+
+        <div className="bottom">
+          <p>Didn't receive a code?</p>
+          <button>Resend</button>
+        </div>
       </div>
     </Suspense>
   );
