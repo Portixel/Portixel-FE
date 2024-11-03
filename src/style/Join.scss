@@ -5,7 +5,7 @@
     height: 100%;
     width: 100%;
     max-width: 598px;
-    background-color: $lighterBgBlack;
+    background-color: #262626;
     padding: 34px 60px;
     overflow-y: auto;
 
@@ -27,7 +27,7 @@
     .title {
       font-weight: bold;
       font-size: 24px;
-      margin: 50px 0 18px;
+      margin: 35px 0 18px;
     }
 
     .subTitle {
@@ -47,7 +47,7 @@
     input,
     select,
     textarea {
-      background-color: $bgBlack;
+      background-color: $lighterBgBlack;
       color: $textSecondary;
       font-size: 12px;
       border: 1px solid $stroke;
@@ -109,6 +109,26 @@
         justify-content: center;
         border: none;
         border-radius: 5px;
+      }
+    }
+
+    .JoinVerification {
+      .otp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+
+      .otpInput {
+        width: 47px;
+        aspect-ratio: 1;
+        text-align: center;
+      }
+
+      .notCompleted {
+        background-color: $lighterBgBlack;
+        color: white;
       }
     }
   }
