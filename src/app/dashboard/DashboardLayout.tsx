@@ -1,4 +1,4 @@
-import DashboardSideBar from "@/components/DashboardSideBar";
+import DashboardSideBar from "@/components/navigations/DashboardSideBar";
 import DashboardTopMenu from "@/components/DashboardTopMenu";
 import { lazy, Suspense } from "react";
 import { Outlet } from "react-router-dom";
