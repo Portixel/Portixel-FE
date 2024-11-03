@@ -24,7 +24,7 @@ const CreateNewMenu = ({
         <button onClick={() => setToggleImport(!toggleImport)}>
           <p>Import through link</p>
           <img
-            alt="Portixel Logo"
+            alt=""
             src="/icon/down.svg"
             width={20}
             height={20}
