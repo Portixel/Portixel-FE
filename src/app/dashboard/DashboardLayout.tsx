@@ -2,6 +2,7 @@ import DashboardSideBar from "@/components/navigations/DashboardSideBar";
 import DashboardTopMenu from "@/components/DashboardTopMenu";
 import { lazy, Suspense } from "react";
 import { Outlet } from "react-router-dom";
+import DashboardTabs from "@/components/navigations/DashboardTabs";
 const NewPortfolioModal = lazy(() => import("@/components/NewPortfolioModal"));
 const ImportModal = lazy(() => import("@/components/import/ImportModal"));
 
@@ -22,6 +23,8 @@ const DashboardLayout = () => {
         </div>
 
         <div className="bottom">
+          <DashboardTabs />
+
           <Suspense fallback={<></>}>
             <Outlet />
           </Suspense>

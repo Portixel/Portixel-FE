@@ -50,6 +50,7 @@
   .bottom {
     height: 100%;
     display: flex;
+    flex-direction: column;
     flex: 1;
     overflow: hidden;
   }
@@ -741,6 +742,66 @@ button.profileMenuParent {
 
   .delete p {
     color: #ff3d00;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               DASHBOARD TABS                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.DashboardTabs {
+  width: 100%;
+  background-color: $primaryCardColor;
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  padding: 10px 38px 0;
+
+  .option {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    a {
+      background-color: transparent;
+      color: $textSecondary;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 8px 15px;
+      transition: none;
+
+      &:hover {
+        background-color: $lighterBgBlack;
+      }
+    }
+
+    span {
+      visibility: hidden;
+      width: 100%;
+      height: 4px;
+      border-radius: 5px 5px 0 0;
+      background-color: $primary;
+      transition: none;
+    }
+  }
+
+  .selected {
+    a {
+      color: white;
+      font-weight: 700;
+    }
+
+    span {
+      visibility: visible;
+    }
   }
 }
 

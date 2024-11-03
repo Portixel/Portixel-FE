@@ -1,7 +1,8 @@
+import { DashboardNavs } from "@/components/navigations/DashboardTabs";
 import { Link, useLocation } from "react-router-dom";
 
 const DashboardSideBar = () => {
-  const selected = useLocation().pathname;
+  const path = useLocation().pathname;
 
   return (
     <div className="DashboardSideBar">
@@ -19,7 +20,10 @@ const DashboardSideBar = () => {
           <Link
             to={tab.url}
             key={tab.title}
-            className={`${selected == tab.url && "selected"}`}
+            className={`${
+              (tab.children ? tab.children.includes(path) : path == tab.url) &&
+              "selected"
+            }`}
           >
             <img alt="" height={14} width={14} src="/icon/tickPlane.svg" />
             {tab.title}
@@ -36,6 +40,7 @@ const Tabs = [
   {
     title: "Dashboard",
     url: "/dashboard",
+    children: DashboardNavs.map((v) => v.url),
   },
 
   {
@@ -44,6 +49,6 @@ const Tabs = [
   },
   {
     title: "Manage team",
-    url: "/dashboard/projects",
+    url: "/dashboard/team",
   },
 ];
