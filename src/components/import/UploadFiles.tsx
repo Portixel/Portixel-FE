@@ -100,14 +100,21 @@ const UploadFiles = () => {
         >
           <img src="/icon/file.svg" alt="" height={30} width={30} />
           <div className="instruction">
-            Drag and drop file here or
-            <input
-              type="file"
-              onChange={handleFileChange}
-              ref={inputRef}
-              multiple
-            />
+            <p>
+              Drag and drop file here or{" "}
+              <span className="action">Click to Upload</span>
+            </p>
           </div>
+
+          <input
+            type="file"
+            onChange={handleFileChange}
+            ref={inputRef}
+            multiple
+            title={`${selectedFiles.length} file${
+              selectedFiles.length > 1 ? "s" : ""
+            } has been selected`}
+          />
         </div>
 
         <div className="subInstruction">
