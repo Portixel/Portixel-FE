@@ -6,7 +6,14 @@ const Dashboard = () => {
   return (
     <Suspense fallback={<></>}>
       <div className="DashboardMain">
-        <p className="intro">Your portfolio</p>
+        <div className="header">
+          <p className="intro">Your portfolio</p>
+
+          <button className="edit">
+            <img src="/icon/edit.svg" alt="" height={18} width={18} />
+            <p>Edit Portfolio</p>
+          </button>
+        </div>
 
         <ProCard />
 

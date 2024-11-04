@@ -1,25 +1,20 @@
 import { memo } from "react";
 
 interface IProjectCards {
-  Data: { id: string; bgImg: string; url: string; time: string };
+  Data: { id: string; bgImg: string };
 }
 
-const ProjectCards = ({ Data: { bgImg, url, time } }: IProjectCards) => {
+const ProjectCards = ({ Data: { bgImg } }: IProjectCards) => {
   return (
     <div className="ProjectCard">
-      <div className="bg" style={{ backgroundImage: `url("${bgImg}")` }}>
-        {bgImg}
-      </div>
-      <div className="left">
-        <p className="url">{url}</p>
+      <img src={bgImg} alt="" height={144} width={321} />
 
-        <p className="time">{time}</p>
-      </div>
-
-      <div className="right">
+      <div className="bottom">
         <div className="dp">
           <p>OF</p>
         </div>
+
+        <p className="url">emerie.portixel.website</p>
 
         <button className="more">
           <img alt="" src="/icon/more.svg" width={34} height={20} />

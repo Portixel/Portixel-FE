@@ -21,21 +21,3 @@ export const DashboardProjectsData = [
     date: "27/08/2024",
   },
 ];
-
-export const DashboardProjectsTabs = [
-  {
-    title: "All Projects",
-  },
-  {
-    title: "Github",
-  },
-  {
-    title: "Figma",
-  },
-  {
-    title: "Marketplace",
-  },
-  {
-    title: "Others",
-  },
-];

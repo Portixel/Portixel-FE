@@ -1,4 +1,5 @@
 import { DashboardNavs } from "@/components/navigations/DashboardTabs";
+import { circlePath } from "@/utils/path";
 import { Link, useLocation } from "react-router-dom";
 
 const DashboardSideBar = () => {
@@ -16,19 +17,18 @@ const DashboardSideBar = () => {
       </Link>
 
       <div className="mainLinks">
-        {Tabs.map((tab) => (
-          <Link
-            to={tab.url}
-            key={tab.title}
-            className={`${
-              (tab.children ? tab.children.includes(path) : path == tab.url) &&
-              "selected"
-            }`}
-          >
-            <img alt="" height={14} width={14} src="/icon/tickPlane.svg" />
-            {tab.title}
-          </Link>
-        ))}
+        {Tabs.map((tab) => {
+          return (
+            <Link
+              to={tab.url}
+              key={tab.title}
+              className={`${circlePath([tab]).includes(path) && "selected"}`}
+            >
+              <img alt="" height={14} width={14} src="/icon/tickPlane.svg" />
+              {tab.title}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
@@ -40,7 +40,7 @@ const Tabs = [
   {
     title: "Dashboard",
     url: "/dashboard",
-    children: DashboardNavs.map((v) => v.url),
+    children: DashboardNavs,
   },
 
   {

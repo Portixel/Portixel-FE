@@ -1,18 +1,24 @@
+import { DashboardProjectsURLS } from "@/app/dashboard/projects/DashboardProjectsLayout";
+import { circlePath } from "@/utils/path";
 import { Link, useLocation } from "react-router-dom";
 
 const DashboardTabs = () => {
   const path = useLocation().pathname;
 
+  const ProjectsAndNavs = DashboardProjectsURLS.map((u) => u.url).concat(
+    DashboardNavs.map((u) => u.url)
+  );
+
   return (
     <div
       className="DashboardTabs"
       style={{
-        display: DashboardNavs.map((n) => n.url).includes(path) ? "" : "none",
+        display: ProjectsAndNavs.includes(path) ? "" : "none",
       }}
     >
       {DashboardNavs.map((nav) => (
         <div
-          className={`option ${path == nav.url && "selected"}`}
+          className={`option ${circlePath([nav]).includes(path) && "selected"}`}
           key={nav.name}
         >
           <Link to={nav.url}>{nav.name}</Link>
@@ -33,6 +39,7 @@ export const DashboardNavs = [
   {
     name: "Projects",
     url: "/dashboard/projects",
+    children: DashboardProjectsURLS,
   },
   {
     name: "Domain",
